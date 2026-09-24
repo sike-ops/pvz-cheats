@@ -275,7 +275,7 @@ LRESULT CALLBACK WindowProc(HWND window, UINT message, WPARAM wParam,
     state->window = window;
     SetWindowLongPtrW(window, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(state));
 
-    return TRUE;
+    break;
   }
   case WM_COMMAND: {
     AppState *state{GetState(window)};
@@ -341,7 +341,7 @@ void ui::Init(HINSTANCE instance) {
       .hInstance = instance,
       .hCursor = LoadCursorW(nullptr, IDC_ARROW),
       .hbrBackground =
-          reinterpret_cast<HBRUSH>(static_cast<INT_PTR>(COLOR_WINDOW + 1)),
+          reinterpret_cast<HBRUSH>(static_cast<INT_PTR>(COLOR_WINDOW)),
       .lpszClassName = kWindowClassName,
   };
 
