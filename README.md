@@ -11,6 +11,7 @@ Hack menu options:
 - Instakill zombies
 
 ![pic](images/pic01.png)
+![vid](images/vid01.gif)
 
 ### Build
 
